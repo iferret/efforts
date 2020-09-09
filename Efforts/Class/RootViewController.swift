@@ -8,24 +8,59 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
-
-    override func viewDidLoad() {
+/// RootViewController
+class RootViewController: UITabBarController {
+    
+    // MARK: - 生命周期
+    
+    /// viewDidLoad
+    internal override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-        view.backgroundColor = .systemOrange
+        // 初始化
+        initialize()
+        
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension RootViewController {
+    
+    /// 初始化
+    private func initialize() {
+        view.backgroundColor = .systemOrange
+        tabBar.barTintColor = .systemOrange
+        
+        // 添加子控制器
+        do {
+            let controller = GuideViewController.init()
+            controller.title = "指导"
+            let navi = UINavigationController.init(rootViewController: controller)
+            navi.tabBarItem.title = "指导"
+            addChild(navi)
+        }
+        
+        do {
+            let controller = QuestionsViewController.init()
+            controller.title = "问题"
+            let navi = UINavigationController.init(rootViewController: controller)
+            navi.tabBarItem.title = "问题"
+            addChild(navi)
+        }
+        
+        do {
+            let controller = AlgorithmViewController.init()
+            controller.title = "算法"
+            let navi = UINavigationController.init(rootViewController: controller)
+            navi.tabBarItem.title = "算法"
+            addChild(navi)
+        }
+        
+        children.forEach { (navi) in
+            guard let navi = navi as? UINavigationController else { return }
+            navi.navigationBar.barTintColor = .systemOrange
+            navi.tabBarItem.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17.0, weight: .medium),  .foregroundColor: UIColor.secondaryLabel], for: .normal)
+            navi.tabBarItem.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17.0, weight: .medium), .foregroundColor: UIColor.label], for: .selected)
+        }
     }
-    */
-
 }

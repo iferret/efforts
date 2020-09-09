@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C7A20E952508EC0A00E32F47 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A20E942508EC0A00E32F47 /* RootViewController.swift */; };
+		C7A20E982508ED5D00E32F47 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A20E972508ED5D00E32F47 /* GuideViewController.swift */; };
+		C7A20E9B2508EDA400E32F47 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A20E9A2508EDA400E32F47 /* QuestionsViewController.swift */; };
+		C7A20E9E2508EDC800E32F47 /* AlgorithmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A20E9D2508EDC800E32F47 /* AlgorithmViewController.swift */; };
 		C7F3D2D12508EAB0000E1497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3D2D02508EAB0000E1497 /* AppDelegate.swift */; };
 		C7F3D2D32508EAB0000E1497 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3D2D22508EAB0000E1497 /* SceneDelegate.swift */; };
 		C7F3D2D52508EAB0000E1497 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3D2D42508EAB0000E1497 /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		C7A20E942508EC0A00E32F47 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C7A20E972508ED5D00E32F47 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
+		C7A20E9A2508EDA400E32F47 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		C7A20E9D2508EDC800E32F47 /* AlgorithmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmViewController.swift; sourceTree = "<group>"; };
 		C7F3D2CD2508EAB0000E1497 /* Efforts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Efforts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F3D2D02508EAB0000E1497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7F3D2D22508EAB0000E1497 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				C7A20E942508EC0A00E32F47 /* RootViewController.swift */,
+				C7A20E9C2508EDB800E32F47 /* Algorithm */,
+				C7A20E992508ED6B00E32F47 /* Questions */,
+				C7A20E962508ED4E00E32F47 /* Guide */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -91,6 +100,30 @@
 			children = (
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C7A20E962508ED4E00E32F47 /* Guide */ = {
+			isa = PBXGroup;
+			children = (
+				C7A20E972508ED5D00E32F47 /* GuideViewController.swift */,
+			);
+			path = Guide;
+			sourceTree = "<group>";
+		};
+		C7A20E992508ED6B00E32F47 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				C7A20E9A2508EDA400E32F47 /* QuestionsViewController.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		C7A20E9C2508EDB800E32F47 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				C7A20E9D2508EDC800E32F47 /* AlgorithmViewController.swift */,
+			);
+			path = Algorithm;
 			sourceTree = "<group>";
 		};
 		C7F3D2C42508EAB0000E1497 = {
@@ -280,7 +313,10 @@
 			files = (
 				C7F3D2D52508EAB0000E1497 /* ViewController.swift in Sources */,
 				C7F3D2D12508EAB0000E1497 /* AppDelegate.swift in Sources */,
+				C7A20E9B2508EDA400E32F47 /* QuestionsViewController.swift in Sources */,
 				C7A20E952508EC0A00E32F47 /* RootViewController.swift in Sources */,
+				C7A20E9E2508EDC800E32F47 /* AlgorithmViewController.swift in Sources */,
+				C7A20E982508ED5D00E32F47 /* GuideViewController.swift in Sources */,
 				C7F3D2D32508EAB0000E1497 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
