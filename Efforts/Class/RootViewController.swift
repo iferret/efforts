@@ -28,8 +28,8 @@ extension RootViewController {
     
     /// 初始化
     private func initialize() {
-        view.backgroundColor = .systemOrange
-        tabBar.barTintColor = .systemOrange
+        view.backgroundColor = .systemBackground
+        tabBar.barTintColor = .systemBackground
         
         // 添加子控制器
         do {
@@ -58,7 +58,7 @@ extension RootViewController {
         
         children.forEach { (navi) in
             guard let navi = navi as? UINavigationController else { return }
-            navi.navigationBar.barTintColor = .systemOrange
+            navi.navigationBar.barTintColor = .systemBackground
             navi.tabBarItem.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17.0, weight: .medium),  .foregroundColor: UIColor.secondaryLabel], for: .normal)
             navi.tabBarItem.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17.0, weight: .medium), .foregroundColor: UIColor.label], for: .selected)
         }
