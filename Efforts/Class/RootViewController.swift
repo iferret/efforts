@@ -32,14 +32,18 @@ class RootViewController: UITabBarController {
         }
     }
     
+    
 }
 
 extension RootViewController {
     
     /// 初始化
     private func initialize() {
-        view.backgroundColor = .systemBackground
-        tabBar.barTintColor = .systemBackground
+        setValue(RootTabbar.init(frame: tabBar.frame), forKey: "tabBar")
+        view.backgroundColor = .secondarySystemBackground
+//        tabBar.barTintColor = .systemBackground
+        
+        
         
         // 添加子控制器
         do {
@@ -49,6 +53,7 @@ extension RootViewController {
             navi.tabBarItem.title = "指导"
             navi.tabBarItem.selectedImage = UIImage.init(named: "icn_guide")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
             navi.tabBarItem.image = UIImage.init(named: "icn_guide")?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
+            controller.view.backgroundColor = .orange
             addChild(navi)
         }
         
@@ -59,6 +64,7 @@ extension RootViewController {
             navi.tabBarItem.title = "问题"
             navi.tabBarItem.selectedImage = UIImage.init(named: "icn_question")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
             navi.tabBarItem.image = UIImage.init(named: "icn_question")?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
+            controller.view.backgroundColor = .red
             addChild(navi)
         }
         
@@ -68,7 +74,8 @@ extension RootViewController {
             let navi = UINavigationController.init(rootViewController: controller)
             navi.tabBarItem.title = "算法"
             navi.tabBarItem.selectedImage = UIImage.init(named: "icn_algorithm")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
-             navi.tabBarItem.image = UIImage.init(named: "icn_algorithm")?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
+            navi.tabBarItem.image = UIImage.init(named: "icn_algorithm")?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
+            controller.view.backgroundColor = .blue
             addChild(navi)
         }
         

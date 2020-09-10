@@ -20,7 +20,7 @@ class AlgorithmViewController: UIViewController {
     /// UITableView
     private lazy var tableView: UITableView = {
         let _tableView = UITableView.init(frame: .zero, style: .plain)
-        
+        _tableView.backgroundColor = .clear
         return _tableView
     }()
     
