@@ -7,24 +7,45 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AlgorithmViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+    // MARK: - 私有属性
+    
+    /// AlgorithmProxy
+    private lazy var proxy: AlgorithmProxy = .init()
+    
+    /// UITableView
+    private lazy var tableView: UITableView = {
+        let _tableView = UITableView.init(frame: .zero, style: .plain)
+        
+        return _tableView
+    }()
+    
+    // MARK: - 生命周期
+    
+    /// viewDidLoad
+    internal override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        // 初始化
+        initialize()
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// MARK: - 自定义
+extension AlgorithmViewController {
+    /// 初始化
+    private func initialize() {
+        view.backgroundColor = .systemBackground
+        
+        // 布局
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
     }
-    */
-
 }

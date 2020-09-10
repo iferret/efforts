@@ -22,6 +22,16 @@ class RootViewController: UITabBarController {
         
     }
     
+    /// traitCollectionDidChange
+    /// - Parameter previousTraitCollection: UITraitCollection
+    internal override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        children.forEach { (navi) in
+            navi.tabBarItem.selectedImage = navi.tabBarItem.selectedImage?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
+            navi.tabBarItem.image = navi.tabBarItem.image?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
+        }
+    }
+    
 }
 
 extension RootViewController {
@@ -66,7 +76,7 @@ extension RootViewController {
             guard let navi = navi as? UINavigationController else { return }
             navi.navigationBar.barTintColor = .systemBackground
             navi.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.systemOrange], for: .selected)
-            navi.tabBarItem.setTitleTextAttributes([ .foregroundColor: UIColor.label], for: .normal)
+            navi.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.secondaryLabel], for: .normal)
         }
     }
 }
