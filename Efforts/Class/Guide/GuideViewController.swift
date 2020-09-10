@@ -26,5 +26,8 @@ class GuideViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - 私有属性
 
 }
+     

@@ -37,6 +37,8 @@ extension RootViewController {
             controller.title = "指导"
             let navi = UINavigationController.init(rootViewController: controller)
             navi.tabBarItem.title = "指导"
+            navi.tabBarItem.selectedImage = UIImage.init(named: "icn_guide")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
+            navi.tabBarItem.image = UIImage.init(named: "icn_guide")?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
             addChild(navi)
         }
         
@@ -45,6 +47,8 @@ extension RootViewController {
             controller.title = "问题"
             let navi = UINavigationController.init(rootViewController: controller)
             navi.tabBarItem.title = "问题"
+            navi.tabBarItem.selectedImage = UIImage.init(named: "icn_question")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
+            navi.tabBarItem.image = UIImage.init(named: "icn_question")?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
             addChild(navi)
         }
         
@@ -53,14 +57,16 @@ extension RootViewController {
             controller.title = "算法"
             let navi = UINavigationController.init(rootViewController: controller)
             navi.tabBarItem.title = "算法"
+            navi.tabBarItem.selectedImage = UIImage.init(named: "icn_algorithm")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
+             navi.tabBarItem.image = UIImage.init(named: "icn_algorithm")?.withTintColor(.secondaryLabel).withRenderingMode(.alwaysOriginal)
             addChild(navi)
         }
         
         children.forEach { (navi) in
             guard let navi = navi as? UINavigationController else { return }
             navi.navigationBar.barTintColor = .systemBackground
-            navi.tabBarItem.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17.0, weight: .medium),  .foregroundColor: UIColor.secondaryLabel], for: .normal)
-            navi.tabBarItem.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 17.0, weight: .medium), .foregroundColor: UIColor.label], for: .selected)
+            navi.tabBarItem.setTitleTextAttributes([.foregroundColor: UIColor.systemOrange], for: .selected)
+            navi.tabBarItem.setTitleTextAttributes([ .foregroundColor: UIColor.label], for: .normal)
         }
     }
 }
